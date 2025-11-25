@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Search Webpage Design</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
 </head>
-<body><div class="container">
-    <div class="bubbles">
-        <span style="--i:11;"></span>
+<body>
+    <!-- Animated background -->
+    <div class="animated-bg">
+        <div class="bubbles">
+            <!-- you can add/remove spans, animation speed uses --i -->
+            <span style="--i:11;"></span>
         <span style="--i:12;"></span>
         <span style="--i:24;"></span>
         <span style="--i:10;"></span>
@@ -49,64 +61,129 @@
         <span style="--i:17;"></span>
         <span style="--i:13;"></span>
         <span style="--i:28;"></span>
+        <span style="--i:30;"></span>
+        <span style="--i:32;"></span>
+        <span style="--i:31;"></span>
+        <span style="--i:33;"></span>
+        <span style="--i:34;"></span>
+        <span style="--i:39;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:35;"></span>
+        <span style="--i:38;"></span>
+        <span style="--i:36;"></span>
+        </div>
     </div>
-</div>
-    <section>
-        <header>
-            <ul class="bar1" style="border-style:solid;padding:5px;color:antiquewhite;border-radius:10px;">
-                <a href="https://store.google.com/IN/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB"><i class="fa-brands fa-google"> S T <i class="fa-solid fa-store"></i> R E </i></a>
-            </ul>
-            <ul>
-                <li><a href="https://www.google.com/intl/en-US/gmail/about/">Gmail</a></li>
-                <li><a href="https://www.google.com/imghp?hl=en&ogbl">Images</a></li>
-                <li><a href="https://play.google.com/store/games?hl=en_IN"><img src="bars.png" alt=""></a></li>
-                <li><a href="https://accounts.google.com/v3/signin/identifier?dsh=S1812573153%3A1655944654029516&flowEntry=ServiceLogin&flowName=WebLiteSignIn&ifkv=AX3vH39E0iYVTmn-NoMNM_C35EPrno8LWsRx2Qhr0HApkVLZ-Zc_Vql8ouaSQOiXzEmthrpOPAV5"><button>Sign In</button></li></a>
-            </ul>
-        </header>
-        <div class="main">
-            <img src="google3.png" alt="">
-            <form class="searchBox" action="https://www.google.com/search" method="get">
-                <input type="text" name="q" class="search" placeholder="Search Google or type a URL">
-                <div class="icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <div><img src="mic2.png" alt=""></div>
-                </div>
-            </form>
-            <div class="buttons">
-                <button type="submit">Google Search</button>
-                <a href="https://doodles.google/">
-                <button>I'm Feeling Lucky</button></a>
+
+    <section class="page">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <a
+                    class="store-link"
+                    href="https://store.google.com/IN/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-GB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-google"></i>
+                    <span> S T <i class="fa-solid fa-store"></i> R E </span>
+                </a>
             </div>
+
+            <nav class="header-right">
+                <a href="https://www.google.com/intl/en-US/gmail/about/" target="_blank" rel="noopener noreferrer">Gmail</a>
+                <a href="https://www.google.com/imghp?hl=en&ogbl" target="_blank" rel="noopener noreferrer">Images</a>
+                <a
+                    href="https://play.google.com/store/games?hl=en_IN"
+                    class="apps-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img src="bars.png" alt="Google apps" />
+                </a>
+                <a
+                    href="https://accounts.google.com/v3/signin/identifier"
+                    class="sign-in-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <button type="button">Sign in</button>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <main class="main">
+            <div class="logo-wrap">
+                <span class="logo-glow"></span>
+                <img src="google2.png" alt="Google logo" class="logo" />
+            </div>
+
+            <form
+                id="searchForm"
+                class="searchBox"
+                action="https://www.google.com/search"
+                method="get"
+            >
+                <i class="fa-solid fa-magnifying-glass search-icon-left" aria-hidden="true"></i>
+
+                <input
+                    type="text"
+                    name="q"
+                    class="search"
+                    placeholder="Search Google or type a URL"
+                    aria-label="Search Google"
+                    autocomplete="off"
+                />
+
+                <!-- mic icon fixed: correct size, clickable, aligned -->
+                <button type="button" class="mic-btn" aria-label="Search by voice">
+                    <img src="mic2.png" alt="" />
+                </button>
+            </form>
+
+            <div class="buttons">
+                <button type="submit" form="searchForm">Google Search</button>
+                <a href="https://doodles.google/" target="_blank" rel="noopener noreferrer">
+                    <button type="button">I'm Feeling Lucky</button>
+                </a>
+            </div>
+
             <ul class="languages">
                 <li>Google offered in:</li>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCBc"> हिन्दी</a></li>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCBg"> বাংলা </a></li>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCBk"> తెలుగు </a></li>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCBo"> मराठी <a></>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCBs"> தமிழ் </a></li>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCBw"> ગુજરાતી </a></li>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCB0"> ಕನ್ನಡ </a></li>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCB4"> മലയാളം </a></li>
-                <li><a href="https://www.google.co.in/setprefs?sig=0_mMpYsB8M40vmx2F6B5x6Mue1Vig%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwilg87ew_6IAxUtbPUHHX8vDooQ2ZgBCB8"> ਪੰਜਾਬੀ </a></i>
+                <li><a href="#">हिन्दी</a></li>
+                <li><a href="#">বাংলা</a></li>
+                <li><a href="#">తెలుగు</a></li>
+                <li><a href="#">मराठी</a></li>
+                <li><a href="#">தமிழ்</a></li>
+                <li><a href="#">ગુજરાતી</a></li>
+                <li><a href="#">ಕನ್ನಡ</a></li>
+                <li><a href="#">മലയാളം</a></li>
+                <li><a href="#">ਪੰਜਾਬੀ</a></li>
             </ul>
-        </div>
-   
-        <div class="footer">
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
             <div class="row row1">
                 <p class="country">India</p>
             </div>
             <div class="row row2">
-                <ul>
-                    <li><a href="https://ads.google.com/intl/en_in/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
-                    <li><a href="https://www.google.com/intl/en_in/business/">Business</a></li><br>
-                    <li><a href="https://about.google/?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header">About</a></li>
-                    <li><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a></li>
-                    <li><a href="https://policies.google.com/privacy?hl=en-IN&fg=1">Privacy</a></li>
-                    <li><a href="https://policies.google.com/terms?hl=en-IN&fg=1">Terms</a></li>
-                    <li><a href="Settings">Settings</a></li><pre style="font-size: 10px;margin-top:10px;margin-left:780px"> © Designed by Nitesh </pre>
+                <ul class="footer-links left">
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">How Search works</a></li>
+                </ul>
+                <ul class="footer-links right">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Settings</a></li>
                 </ul>
             </div>
-        </div>
+            <div class="row credit-row">
+                <span class="credit">© Designed by Nitesh</span>
+            </div>
+        </footer>
     </section>
 </body>
 </html>
