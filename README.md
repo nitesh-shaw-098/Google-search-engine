@@ -6,7 +6,7 @@ This project recreates the classic Google search interface with modern animation
 ---
 
 ## 🚀 Live Demo
-> *[(Add link here if deployed — GitHub Pages / Netlify / Vercel)](https://nitesh-shaw-098.github.io/Google-search-engine/)*
+> *[(click for live demo)](https://nitesh-shaw-098.github.io/Google-search-engine/)*
 
 ---
 
